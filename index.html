@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Ayaa Tercinta</title>
+    <style>
+        /* CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'butler', cursive;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            overflow-x: hidden;
+        }
+
+        .page {
+            display: none;
+            min-height: 100vh;
+            padding: 20px;
+            animation: fadeIn 1.5s;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .hearts {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            color: #ff4081;
+            animation: float 8s infinite;
+            opacity: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #c62828;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .photo-frame {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: rotate(3deg);
+            transition: transform 0.3s;
+        }
+
+        .photo-frame:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .message-box {
+            background: rgba(255,255,255,0.9);
+            margin: 20px;
+            padding: 30px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        button {
+            background: #c62828;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .rose {
+            position: fixed;
+            width: 50px;
+            animation: fall 8s linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Audio -->
+    <audio id="bgMusic" loop autoplay>
+        <source src="hilmira.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Pages -->
+    <div id="page1" class="page active">
+        <header>
+            <h1>Untuk Ayaa Tercinta 💖</h1>
+        </header>
+        <div class="message-box">
+            <p>Selamat datang sayangkuuu</p>
+            <button onclick="showPage(2)">klik ini ya aya sayangg</button>
+        </div>
+    </div>
+
+    <div id="page2" class="page">
+        <header>
+            <h1>memory kecil kita</h1>
+        </header>
+        <div class="gallery">
+            <!-- Ganti sumber gambar dengan foto-foto kalian -->
+            <div class="photo-frame">
+                <img src="img2.jpg" alt="Kenangan 1">
+                <p>ini foto pertama kitaa ayy wkwkw</p>
+            </div>
+            <div class="photo-frame">
+                <img src="img1.jpg".jpg" alt="Kenangan 2">
+                <p>lucu yaa kita pake kacamata hehehe</p>
+            </div>
+            <div class="photo-frame">
+                <img src="img3.jpg" alt="Kenangan 1">
+                <p>kalo ini foto maska dan aya sebelum magangg</p>
+            </div>
+            <div class="photo-frame">
+                <img src="img4.jpg" alt="Kenangan 1">
+                <p>first foto with pramuka hehehe</p>
+            </div>
+            <div class="photo-frame">
+                <img src="img5.jpg".jpg" alt="Kenangan 2">
+                <p>kalo ini foto kelulusan maskaa wkwkw (aga crash wkwk)</p>
+            </div>
+            <div class="photo-frame">
+                <img src="img6.jpg" alt="Kenangan 1">
+                <p>foto lucu dirumah ayaa hehe (i wish i can again sayang)</p>
+            </div>
+            <div class="photo-frame">
+                <img src="img7.jpg".jpg" alt="Kenangan 2">
+                <p>foto gunung terbagus kita dan gunung 3000mdpl pertama maska wkwkwkwk</p>
+            </div>
+            <div class="photo-frame">
+                <img src="img8.jpg".jpg" alt="Kenangan 2">
+                <p>kalo ini bunga pertama kitaa hehehe</p>
+            </div>
+            <div class="photo-frame">
+                <img src="img9.jpg" alt="Kenangan 1">
+                <p>perawat ku tambah cantik ya</p>
+            </div>
+            <div class="photo-frame">
+                <img src="img10.jpg".jpg" alt="Kenangan 2">
+                <p>ini gunung tertinggi di jateng maska persembahkan untuk ayaa</p>
+            </div>
+        </div>
+        <div class="navigation">
+            <button onclick="showPage(1)">Kembali</button>
+            <button onclick="showPage(3)">Lanjut</button>
+        </div>
+    </div>
+
+    <div id="page3" class="page">
+        <div class="message-box">
+            <h2>Untuk Ayaa...</h2>
+            <p>Maskaa tahu perjalanan kita tidak selalu mulus, dan mungkin ada luka yang masih tersisa dari masa lalu. Tapi, lihatlah kita sekarang—masih di sini, masih berusaha, dan masih memilih satu sama lain. Maskaa bangga sama Ayaa, bangga sama kita. Setiap langkah kecil yang kita ambil bersama adalah bukti bahwa cinta kita lebih kuat dari rasa sakit yang pernah kita alami.
+
+                Maskaa mungkin tidak selalu bisa menghapus semua rasa ragu atau takut Ayaa, tapi Maskaa berjanji akan selalu ada di samping Ayaa, memegang tangan Ayaa, dan mengingatkan Ayaa bahwa kita bisa melewati ini bersama. Ayaa tidak sendirian, sayang. Maskaa di sini, dan Maskaa mencintai Ayaa—bukan karena sempurna, tapi karena Ayaa adalah Ayaa.
+                
+                Mari kita terus berjuang, bukan untuk mengulang yang dulu, tapi untuk membangun sesuatu yang lebih indah. Maskaa percaya pada kita. 💕</p>
+            <button onclick="showPage(2)">Lihat Foto Lagii</button>
+            <button onclick="showPage(4)">Pesan terakhir dari maska</button>
+        </div>
+    </div>
+
+    <div id="page4" class="page">
+        <div class="message-box">
+            <h2>Selamanya Milikmu 💌</h2>
+            <p>Terima kasih yaa cinta sudah berjuang sampai sekarang</p>
+            <p>terima kasih telah mengajarkan maska arti ketulusan</p>
+            <p>maska udah gabisa bilang apa lagi selain i am proud of u sayangkuu</p>
+            <p>kita buktiin KITA BISA yaa sayangg</p>
+            <p>i love u in every condition sayangg</p>
+            <p>sehat selalu kinnas, hilmiraku</p>
+            <p>- [ NAKA ]</p>
+            <button onclick="showPage(1)">kembali</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Membuat efek hati jatuh
+        function createHearts() {
+            const container = document.body;
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❤';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(heart);
+            }
+        }
+
+        // Navigasi halaman
+        function showPage(pageNumber) {
+            document.querySelector('.page.active').classList.remove('active');
+            document.getElementById('page' + pageNumber).classList.add('active');
+        }
+
+        // Musik background
+        const audio = document.getElementById('bgMusic');
+        document.body.addEventListener('click', () => {
+            audio.play();
+        });
+
+        // Inisialisasi
+        window.onload = function() {
+            createHearts();
+            setInterval(() => {
+                const rose = document.createElement('img');
+                rose.className = 'rose';
+                rose.src = 'https://www.freeiconspng.com/uploads/rose-flower-png-5.png';
+                rose.style.left = Math.random() * 100 + '%';
+                document.body.appendChild(rose);
+                
+                setTimeout(() => rose.remove(), 8000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
